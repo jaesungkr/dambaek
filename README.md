@@ -80,3 +80,7 @@ The project is in early development. Platform setup guidance is based on officia
 Help improve Dambaek with Korean before-and-after examples, meaning-preservation failures, or better usage instructions. Small, specific examples are especially useful.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for a submission template and review checklist. Use original or shareable text and remove private information before posting.
+
+## License
+
+[MIT](LICENSE) © 2026 Jaesung Park.
