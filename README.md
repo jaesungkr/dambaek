@@ -69,6 +69,12 @@ See [platform notes](docs/platforms.md) for official setup references and valida
 - Show meaningful changes so the writer can review them.
 - Follow the writer's preferences rather than flattening every draft into one style.
 
+## Learning from finished posts
+
+Dambaek also draws on finished blog posts, not only lists of unwanted expressions. The [blog-editing reference](references/blog-editing.md) separates observations from reusable editing rules: concrete openings, useful transitions, table commentary, and the boundary between reported evidence and personal experience. The source posts are linked, not bundled as a corpus.
+
+Technical-blog conventions such as declarative endings, tables and limited first-person narration are optional. A personal essay or polite email keeps its own voice.
+
 ## Examples and review
 
 Explore the [editing examples](references/examples.md) and [behavioral review cases](tests/README.md). They cover both useful edits and information that must survive a rewrite.

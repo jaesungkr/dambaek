@@ -1,6 +1,6 @@
 # Behavior review
 
-`cases.json` contains 16 runnable review inputs. Each record supplies the complete request, text and invariants. They are original fixtures, not user manuscripts.
+`cases.json` contains 23 runnable review inputs. Each record supplies the complete request, text and invariants. They are original fixtures, not user manuscripts.
 
 ## Run a review
 
@@ -11,7 +11,7 @@
 
 Use a fresh context per case for benchmark-style evaluation. A batch run is a bounded development check and must be labeled as such. Record any changed instructions or extra hints.
 
-`REVIEW.md` records an earlier five-case check. `DEVELOPMENT_REVIEW.md`, when present, records the current bounded check. Neither establishes cross-platform compatibility or performance versus a baseline.
+`REVIEW.md` records an earlier five-case check. `DEVELOPMENT_REVIEW.md`, when present, records an earlier bounded check. Neither establishes cross-platform compatibility or performance versus a baseline.
 
 ## Structural check
 
@@ -22,3 +22,5 @@ python3 tests/check_structure.py
 ```
 
 This dependency-free check verifies skill metadata, fixture completeness and local Markdown links. It does not execute an AI model, assess Korean prose quality or call external services.
+
+`BLOG_REVIEW.md` records the blog-derived revision and its bounded six-input review. The full 23-case suite has not been executed.
