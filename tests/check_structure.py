@@ -15,6 +15,8 @@ assert len({case["id"] for case in cases}) == len(cases), "Duplicate case ID"
 for case in cases:
     assert all(isinstance(case[key], str) and case[key].strip() for key in ("id", "request", "input"))
     assert case["invariants"] and all(isinstance(item, str) and item.strip() for item in case["invariants"])
+    if "improvement_checks" in case:
+        assert case["improvement_checks"] and all(isinstance(item, str) and item.strip() for item in case["improvement_checks"])
 for path in ROOT.rglob("*.md"):
     text = path.read_text(encoding="utf-8")
     for target in re.findall(r"\[[^\]]*\]\(([^)]+)\)", text):

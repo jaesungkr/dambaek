@@ -1,6 +1,6 @@
 # Behavior review
 
-`cases.json` contains 30 runnable review inputs. Each record supplies the complete request, text and invariants. They are original fixtures, not user manuscripts.
+`cases.json` contains 36 runnable review inputs. Each record supplies the complete request, text and invariants. They are original fixtures, not user manuscripts.
 
 ## Run a review
 
@@ -26,3 +26,13 @@ This dependency-free check verifies skill metadata, fixture completeness and loc
 `BLOG_REVIEW.md` records the blog-derived revision and its bounded six-input review. That review did not execute the full 23-case suite.
 
 `GENERAL_REVIEW.md` records the general-writing revision. The full 30-case suite has not been executed.
+
+## Three separate checks
+
+1. **Structure:** metadata, fixture fields, and local links. This does not judge prose.
+2. **Preservation:** evaluate each invariant. A lost condition, changed promise, or invented experience fails regardless of how fluent the result sounds.
+3. **Useful editing:** for cases with `improvement_checks`, check whether the actual awkwardness was improved. A no-op can preserve meaning but fail this layer. Natural prose may still remain unchanged. Do not score by character count or detector output.
+
+For comparisons, use the same inputs and run conditions with the baseline and revised guidance. Hide variant names and desired outputs from the editor and, where possible, from the grader. Save unedited outputs and instruction hashes. Report preservation and editing separately, including ties and regressions; a small batch is not a benchmark.
+
+`PATTERN_REVIEW.md` records the bounded paired check for six composite cases. The full 36-case suite has not been executed.
