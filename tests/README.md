@@ -1,6 +1,6 @@
 # Behavior review
 
-`cases.json` contains 23 runnable review inputs. Each record supplies the complete request, text and invariants. They are original fixtures, not user manuscripts.
+`cases.json` contains 30 runnable review inputs. Each record supplies the complete request, text and invariants. They are original fixtures, not user manuscripts.
 
 ## Run a review
 
@@ -23,4 +23,6 @@ python3 tests/check_structure.py
 
 This dependency-free check verifies skill metadata, fixture completeness and local Markdown links. It does not execute an AI model, assess Korean prose quality or call external services.
 
-`BLOG_REVIEW.md` records the blog-derived revision and its bounded six-input review. The full 23-case suite has not been executed.
+`BLOG_REVIEW.md` records the blog-derived revision and its bounded six-input review. That review did not execute the full 23-case suite.
+
+`GENERAL_REVIEW.md` records the general-writing revision. The full 30-case suite has not been executed.

@@ -8,6 +8,10 @@ Dambaek is a Korean-first writing skill for polishing AI-assisted drafts into na
 
 The project grew out of writing and revising Korean blog posts with AI: asking for less predictable introductions, removing distracting punctuation, and repeatedly correcting edits that changed the meaning. Those everyday editorial decisions are the starting point for its reusable guidance.
 
+## Beyond blog posts
+
+Dambaek also works as editing guidance for emails, everyday messages, introductions, and personal writing. Preserve the relationship, register, emotional tone, and strength of a request or commitment. It does not turn every draft into a blog post or add headings, tables, or conclusions by default. See [everyday writing examples](references/everyday-writing.md).
+
 ## What it helps with
 
 | Pattern | Editing approach |
