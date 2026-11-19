@@ -1,6 +1,6 @@
 # Behavior review
 
-`cases.json` contains 37 runnable review inputs. Each record supplies the complete request, text and invariants. They are original fixtures, not user manuscripts.
+`cases.json` contains 38 runnable review inputs. Each record supplies the complete request, text and invariants. They are original fixtures, not user manuscripts.
 
 ## Run a review
 
