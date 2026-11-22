@@ -1,12 +1,8 @@
 # 담백 · Dambaek
 
-### Natural Korean writing, shaped by real blogging experience.
-
 **English** | [한국어](README.ko.md)
 
-Dambaek is a Korean-first writing skill for polishing AI-assisted drafts into natural, readable prose. It trims repetitive phrasing, stiff transitions, and unnecessary contrasts while preserving what the writer meant.
-
-The project grew out of writing and revising Korean blog posts with AI: asking for less predictable introductions, removing distracting punctuation, and repeatedly correcting edits that changed the meaning. Those everyday editorial decisions are the starting point for its reusable guidance.
+Dambaek helps edit Korean drafts for natural phrasing while preserving the writer’s meaning and tone. When editing a paragraph, it joins sentences whose relationship is clear from the draft and keeps the details readers need to follow it.
 
 ## Context-sensitive editing
 
@@ -62,7 +58,7 @@ The core is a readable instruction file. It requires no application install or A
 | Tool | How to supply the guidance |
 | --- | --- |
 | ChatGPT | Paste it with the draft, or keep it as project reference material and add a project instruction to use it. |
-| Claude | Paste it with the draft. For recurring use, package the skill folder using Claude's documented custom-skill format. |
+| Claude | Paste it with the draft. To install a custom skill, zip the `dambaek` folder containing `SKILL.md` and `references/`, then upload it to Claude. |
 | Notion AI | Paste the guidance into your editing request, or keep it on a page and explicitly reference that page with your draft. |
 | Other assistants | Provide the plain-text guidance and draft in the same context. |
 
@@ -71,6 +67,9 @@ See [platform notes](docs/platforms.md) for official setup references and valida
 ## Editorial principles
 
 - Preserve facts, uncertainty, numbers, names, quotations, and the author's position.
+- Count sightings separately from individuals. “오전과 오후에 수달을 봤다” records two sightings. Both could be of the same otter.
+- Keep `만` (only) attached to what it limits. “민지가 사진만 보냈다” limits what Minji sent. “민지만 사진을 보냈다” limits who sent photos.
+- State what the source establishes. “공지에는 날짜가 없다” tells us the notice omits the date. The event date could already be set.
 - Keep useful caveats and genuine contrasts. Evaluate their purpose before cutting them.
 - Preserve Korean speech level and the requested document format.
 - Protect code, links, tables, and quoted material from incidental rewrites.
