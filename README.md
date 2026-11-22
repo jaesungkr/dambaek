@@ -4,17 +4,36 @@
 
 Dambaek is a set of instructions for editing Korean prose with AI while preserving the writer’s meaning and tone.
 
-## Install for Claude Code
+## Installation
 
-| One-line install | Skill-only ZIP for Windows |
-| --- | --- |
-| In your project terminal, run the command below with Node.js 22.20.0 or later. | The review ZIP is named `dambaek-claude-code.zip`. Public download is pending. If you have the ZIP, choose **Extract All** and select your project folder as the destination. |
+### Claude Code
 
-```sh
-npx --yes skills@1.9.0 add jaesungkr/dambaek --skill dambaek -a claude-code -y
+Once this review is published, enter these commands in Claude Code. No Node.js update is required.
+
+```text
+/plugin marketplace add jaesungkr/dambaek
+/plugin install dambaek@dambaek
 ```
 
-Both methods install `.claude/skills/dambaek/SKILL.md`. Start Claude Code in the same project. At the **Claude Code prompt**, type `/dambaek draft.md의 도입부를 다듬어 줘`.
+Start a new session and type `/dambaek:dambaek draft.md의 도입부를 다듬어 줘`.
+
+### Codex
+
+With **Node.js 22.20.0 or later**, run this in your project terminal:
+
+```sh
+npx --yes skills@1.9.0 add jaesungkr/dambaek --skill dambaek -a codex -y
+```
+
+Start Codex in that project and type `$dambaek draft.md의 도입부를 다듬어 줘`.
+
+### Claude.ai and Claude Desktop chat
+
+Use the dedicated **dambaek-chat.zip** review download. In **Customize → Skills → + → Create skill → Upload a skill**, upload the ZIP as-is and enable Dambaek. Ask Claude to polish a Korean draft in chat. This route requires code execution and file creation in Claude and works without a local Node.js update.
+
+**File preview in Codex and Claude Code**
+
+In either agent, you can also ask naturally, “draft.md의 도입부를 자연스러운 한국어로 다듬어 줘.” Review the preview in chat. To write the change, say “방금 제안한 도입부만 파일에 반영해 줘.”
 
 **Before**
 
@@ -25,12 +44,6 @@ Both methods install `.claude/skills/dambaek/SKILL.md`. Start Claude Code in the
 > 모임 장소는 2층 강의실입니다. 토요일에는 강의실을 쓸 수 없어 1층 도서실에서 모입니다.
 
 The edit mentions Saturday only once and keeps the reason for the change of venue.
-
-## Use in Codex
-
-Run `npx --yes skills@1.9.0 add jaesungkr/dambaek --skill dambaek -a codex -y` in your project terminal. Start Codex in that project and type `$dambaek draft.md의 도입부를 다듬어 줘`.
-
-In either agent, you can also ask naturally, “draft.md의 도입부를 자연스러운 한국어로 다듬어 줘.” Review the preview in chat. To write the change, say “방금 제안한 도입부만 파일에 반영해 줘.”
 
 ## Try it on a draft
 
@@ -43,7 +56,6 @@ Paste the contents of [SKILL.md](SKILL.md) and your draft into the same conversa
 | Tool | Setup |
 | --- | --- |
 | ChatGPT | Add the file to a project and ask ChatGPT in the project instructions to use Dambaek when editing Korean. |
-| Claude | To install a custom skill, put `SKILL.md` and `references/` in a folder named `dambaek`, zip the folder, and upload it to Claude. |
 | Notion AI | Save the instructions on a page and mention it in your editing request. If the editor cannot read the page, paste the instructions with the draft. |
 
 See the [platform guide](docs/platforms.md) for account requirements, official setup instructions, and the status of product testing.

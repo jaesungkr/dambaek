@@ -4,17 +4,36 @@
 
 담백은 글쓴이의 뜻과 말투를 살리면서 어색한 한국어 문장을 다듬는 AI 편집 지침입니다.
 
-## Claude Code에 설치하기
+## 설치
 
-| 한 줄 설치 | Windows용 스킬 ZIP |
-| --- | --- |
-| Node.js 22.20.0 이상에서 프로젝트 폴더의 터미널을 열고 아래 명령을 실행하세요. | 검토용 파일 이름은 `dambaek-claude-code.zip`입니다. 공개 다운로드는 준비 중입니다. ZIP을 받았다면 **모두 압축 풀기**를 선택하고 대상 위치로 프로젝트 폴더를 지정하세요. |
+### Claude Code
 
-```sh
-npx --yes skills@1.9.0 add jaesungkr/dambaek --skill dambaek -a claude-code -y
+이 검토본이 공개되면 Claude Code 대화 입력창에서 아래 두 명령을 차례대로 실행하세요. Node.js를 업데이트할 필요는 없습니다.
+
+```text
+/plugin marketplace add jaesungkr/dambaek
+/plugin install dambaek@dambaek
 ```
 
-두 방법 모두 프로젝트에 `.claude/skills/dambaek/SKILL.md`를 설치합니다. 같은 프로젝트에서 Claude Code를 열고 **Claude Code 대화 입력창**에 `/dambaek draft.md의 도입부를 다듬어 줘`를 입력하세요.
+새 세션에서 `/dambaek:dambaek draft.md의 도입부를 다듬어 줘`를 입력하세요.
+
+### Codex
+
+**Node.js 22.20.0 이상**에서 프로젝트 폴더의 터미널에 다음 명령을 입력하세요.
+
+```sh
+npx --yes skills@1.9.0 add jaesungkr/dambaek --skill dambaek -a codex -y
+```
+
+같은 프로젝트에서 Codex를 열고 `$dambaek draft.md의 도입부를 다듬어 줘`를 입력하세요.
+
+### Claude.ai와 Claude Desktop 일반 채팅
+
+검토용 **dambaek-chat.zip**을 사용하세요. **Customize → Skills → + → Create skill → Upload a skill**에서 압축을 풀지 않은 채 업로드하고 담백을 켜세요. 채팅에 한국어 초안을 붙여 넣고 다듬어 달라고 요청하세요. Claude의 코드 실행·파일 생성 기능이 필요하며, 로컬 Node.js 업데이트는 필요하지 않습니다.
+
+**Codex와 Claude Code의 파일 미리보기**
+
+두 도구 모두 “draft.md의 도입부를 자연스러운 한국어로 다듬어 줘”처럼 요청할 수 있습니다. 대화에서 수정안을 확인하고, 파일에 쓰려면 “방금 제안한 도입부만 파일에 반영해 줘”라고 요청하세요.
 
 **다듬기 전**
 
@@ -23,12 +42,6 @@ npx --yes skills@1.9.0 add jaesungkr/dambaek --skill dambaek -a claude-code -y
 **다듬은 뒤**
 
 > 모임 장소는 2층 강의실입니다. 토요일에는 강의실을 쓸 수 없어 1층 도서실에서 모입니다.
-
-## Codex에서 쓰기
-
-프로젝트 터미널에서 `npx --yes skills@1.9.0 add jaesungkr/dambaek --skill dambaek -a codex -y`를 실행하세요. 같은 프로젝트에서 Codex를 열고 `$dambaek draft.md의 도입부를 다듬어 줘`를 입력하세요.
-
-두 도구 모두 “draft.md의 도입부를 자연스러운 한국어로 다듬어 줘”처럼 요청할 수 있습니다. 대화에서 수정안을 확인하고, 파일에 쓰려면 “방금 제안한 도입부만 파일에 반영해 줘”라고 요청하세요.
 
 ## 바로 써 보기
 
@@ -41,7 +54,6 @@ npx --yes skills@1.9.0 add jaesungkr/dambaek --skill dambaek -a claude-code -y
 | 도구 | 지침을 다시 쓰는 방법 |
 | --- | --- |
 | ChatGPT | 프로젝트 자료에 지침 파일을 올리고, 프로젝트 지침에 “한국어 글을 다듬을 때 담백을 참고해 줘”라고 적으세요. |
-| Claude | 사용자 스킬로 설치하려면 `SKILL.md`와 `references/`가 들어 있는 `dambaek` 폴더를 ZIP으로 묶어 업로드하세요. |
 | Notion AI | 지침을 페이지에 저장한 뒤 편집을 요청할 때 그 페이지를 지정하세요. AI가 페이지를 읽을 수 없으면 지침을 직접 붙여 넣으세요. |
 
 [도구별 사용 안내](docs/platforms.md)에 공식 문서를 바탕으로 정리한 설정 방법과 이용 조건이 있습니다. 제품별 실제 사용 여부는 안내 문서의 검증 기록에서 확인할 수 있습니다.

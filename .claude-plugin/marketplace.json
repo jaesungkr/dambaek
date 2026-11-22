@@ -1,0 +1,13 @@
+{
+  "name": "dambaek",
+  "owner": {
+    "name": "jaesungkr"
+  },
+  "plugins": [
+    {
+      "name": "dambaek",
+      "source": "./",
+      "description": "Edit Korean drafts while preserving meaning and voice."
+    }
+  ]
+}
