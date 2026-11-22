@@ -4,6 +4,18 @@
 
 Dambaek is a set of instructions for editing Korean prose with AI while preserving the writer’s meaning and tone.
 
+## Install for Claude Code
+
+| One-line install | Skill-only ZIP for Windows |
+| --- | --- |
+| In your project terminal, run the command below with Node.js 22.20.0 or later. | The review ZIP is named `dambaek-claude-code.zip`. Public download is pending. If you have the ZIP, choose **Extract All** and select your project folder as the destination. |
+
+```sh
+npx --yes skills@1.9.0 add jaesungkr/dambaek --skill dambaek -a claude-code -y
+```
+
+Both methods install `.claude/skills/dambaek/SKILL.md`. Start Claude Code in the same project. At the **Claude Code prompt**, type `/dambaek draft.md의 도입부를 다듬어 줘`.
+
 **Before**
 
 > 모임 장소는 2층 강의실입니다. 다만 토요일에는 2층 강의실을 쓸 수 없어서 토요일 모임은 1층 도서실에서 엽니다.
@@ -14,17 +26,11 @@ Dambaek is a set of instructions for editing Korean prose with AI while preservi
 
 The edit mentions Saturday only once and keeps the reason for the change of venue.
 
-## Use in Codex or Claude Code
+## Use in Codex
 
-From your project directory, with Node.js 22.20.0 or later, install for both agents:
+Run `npx --yes skills@1.9.0 add jaesungkr/dambaek --skill dambaek -a codex -y` in your project terminal. Start Codex in that project and type `$dambaek draft.md의 도입부를 다듬어 줘`.
 
-```sh
-npx --yes skills@1.9.0 add jaesungkr/dambaek --skill dambaek -a codex -a claude-code -y
-```
-
-Start a new session in the project. Try `$dambaek draft.md의 도입부를 다듬어 줘` in Codex or `/dambaek draft.md의 도입부를 다듬어 줘` in Claude Code. In either, you can also ask naturally, “draft.md의 도입부를 자연스러운 한국어로 다듬어 줘.”
-
-Review the suggested wording in chat. To write the change, say “방금 제안한 도입부만 파일에 반영해 줘.”
+In either agent, you can also ask naturally, “draft.md의 도입부를 자연스러운 한국어로 다듬어 줘.” Review the preview in chat. To write the change, say “방금 제안한 도입부만 파일에 반영해 줘.”
 
 ## Try it on a draft
 

@@ -4,6 +4,18 @@
 
 담백은 글쓴이의 뜻과 말투를 살리면서 어색한 한국어 문장을 다듬는 AI 편집 지침입니다.
 
+## Claude Code에 설치하기
+
+| 한 줄 설치 | Windows용 스킬 ZIP |
+| --- | --- |
+| Node.js 22.20.0 이상에서 프로젝트 폴더의 터미널을 열고 아래 명령을 실행하세요. | 검토용 파일 이름은 `dambaek-claude-code.zip`입니다. 공개 다운로드는 준비 중입니다. ZIP을 받았다면 **모두 압축 풀기**를 선택하고 대상 위치로 프로젝트 폴더를 지정하세요. |
+
+```sh
+npx --yes skills@1.9.0 add jaesungkr/dambaek --skill dambaek -a claude-code -y
+```
+
+두 방법 모두 프로젝트에 `.claude/skills/dambaek/SKILL.md`를 설치합니다. 같은 프로젝트에서 Claude Code를 열고 **Claude Code 대화 입력창**에 `/dambaek draft.md의 도입부를 다듬어 줘`를 입력하세요.
+
 **다듬기 전**
 
 > 모임 장소는 2층 강의실입니다. 다만 토요일에는 2층 강의실을 쓸 수 없어서 토요일 모임은 1층 도서실에서 엽니다.
@@ -12,17 +24,11 @@
 
 > 모임 장소는 2층 강의실입니다. 토요일에는 강의실을 쓸 수 없어 1층 도서실에서 모입니다.
 
-## Codex와 Claude Code에서 쓰기
+## Codex에서 쓰기
 
-Node.js 22.20.0 이상에서 프로젝트 폴더를 열고 두 도구용으로 설치하세요.
+프로젝트 터미널에서 `npx --yes skills@1.9.0 add jaesungkr/dambaek --skill dambaek -a codex -y`를 실행하세요. 같은 프로젝트에서 Codex를 열고 `$dambaek draft.md의 도입부를 다듬어 줘`를 입력하세요.
 
-```sh
-npx --yes skills@1.9.0 add jaesungkr/dambaek --skill dambaek -a codex -a claude-code -y
-```
-
-같은 프로젝트에서 새 세션을 여세요. Codex에서는 `$dambaek draft.md의 도입부를 다듬어 줘`, Claude Code에서는 `/dambaek draft.md의 도입부를 다듬어 줘`로 시작하세요. 두 도구 모두 “draft.md의 도입부를 자연스러운 한국어로 다듬어 줘”처럼 요청할 수도 있습니다.
-
-먼저 대화에서 수정안을 확인하세요. 파일에 쓰려면 “방금 제안한 도입부만 파일에 반영해 줘”라고 요청하세요.
+두 도구 모두 “draft.md의 도입부를 자연스러운 한국어로 다듬어 줘”처럼 요청할 수 있습니다. 대화에서 수정안을 확인하고, 파일에 쓰려면 “방금 제안한 도입부만 파일에 반영해 줘”라고 요청하세요.
 
 ## 바로 써 보기
 
