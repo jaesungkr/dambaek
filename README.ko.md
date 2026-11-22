@@ -12,6 +12,18 @@
 
 > 모임 장소는 2층 강의실입니다. 토요일에는 강의실을 쓸 수 없어 1층 도서실에서 모입니다.
 
+## Codex와 Claude Code에서 쓰기
+
+Node.js 22.20.0 이상에서 프로젝트 폴더를 열고 두 도구용으로 설치하세요.
+
+```sh
+npx --yes skills@1.9.0 add jaesungkr/dambaek --skill dambaek -a codex -a claude-code -y
+```
+
+같은 프로젝트에서 새 세션을 여세요. Codex에서는 `$dambaek draft.md의 도입부를 다듬어 줘`, Claude Code에서는 `/dambaek draft.md의 도입부를 다듬어 줘`로 시작하세요. 두 도구 모두 “draft.md의 도입부를 자연스러운 한국어로 다듬어 줘”처럼 요청할 수도 있습니다.
+
+먼저 대화에서 수정안을 확인하세요. 파일에 쓰려면 “방금 제안한 도입부만 파일에 반영해 줘”라고 요청하세요.
+
 ## 바로 써 보기
 
 [SKILL.md](SKILL.md)의 내용과 다듬을 글을 같은 대화에 붙여 넣고 이렇게 요청하세요.
