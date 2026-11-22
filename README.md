@@ -8,7 +8,7 @@ Dambaek is a set of instructions for editing Korean prose with AI while preservi
 
 ### Claude Code
 
-Once this review is published, enter these commands in Claude Code. No Node.js update is required.
+Enter these commands in Claude Code. No Node.js update is required.
 
 ```text
 /plugin marketplace add jaesungkr/dambaek
@@ -29,7 +29,9 @@ Start Codex in that project and type `$dambaek draft.md의 도입부를 다듬�
 
 ### Claude.ai and Claude Desktop chat
 
-Use the dedicated **dambaek-chat.zip** review download. In **Customize → Skills → + → Create skill → Upload a skill**, upload the ZIP as-is and enable Dambaek. Ask Claude to polish a Korean draft in chat. This route requires code execution and file creation in Claude and works without a local Node.js update.
+Download [dambaek-chat.zip](https://github.com/jaesungkr/dambaek/releases/download/v0.1.0/dambaek-chat.zip). In **Customize → Skills → + → Create skill → Upload a skill**, upload the ZIP as-is and enable Dambaek. Ask Claude to polish a Korean draft in chat. This route requires code execution and file creation in Claude and works without a local Node.js update.
+
+ZIP SHA-256: `2bb9709f93cb16ee5d055766ddb484334af9973d37a420cd6f13ab65820c7048`
 
 **File preview in Codex and Claude Code**
 

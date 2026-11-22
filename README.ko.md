@@ -8,7 +8,7 @@
 
 ### Claude Code
 
-이 검토본이 공개되면 Claude Code 대화 입력창에서 아래 두 명령을 차례대로 실행하세요. Node.js를 업데이트할 필요는 없습니다.
+Claude Code 대화 입력창에서 아래 두 명령을 차례대로 실행하세요. Node.js를 업데이트할 필요는 없습니다.
 
 ```text
 /plugin marketplace add jaesungkr/dambaek
@@ -29,7 +29,9 @@ npx --yes skills@1.9.0 add jaesungkr/dambaek --skill dambaek -a codex -y
 
 ### Claude.ai와 Claude Desktop 일반 채팅
 
-검토용 **dambaek-chat.zip**을 사용하세요. **Customize → Skills → + → Create skill → Upload a skill**에서 압축을 풀지 않은 채 업로드하고 담백을 켜세요. 채팅에 한국어 초안을 붙여 넣고 다듬어 달라고 요청하세요. Claude의 코드 실행·파일 생성 기능이 필요하며, 로컬 Node.js 업데이트는 필요하지 않습니다.
+[dambaek-chat.zip](https://github.com/jaesungkr/dambaek/releases/download/v0.1.0/dambaek-chat.zip)을 내려받으세요. **Customize → Skills → + → Create skill → Upload a skill**에서 압축을 풀지 않은 채 업로드하고 담백을 켜세요. 채팅에 한국어 초안을 붙여 넣고 다듬어 달라고 요청하세요. Claude의 코드 실행·파일 생성 기능이 필요하며, 로컬 Node.js 업데이트는 필요하지 않습니다.
+
+ZIP SHA-256: `2bb9709f93cb16ee5d055766ddb484334af9973d37a420cd6f13ab65820c7048`
 
 **Codex와 Claude Code의 파일 미리보기**
 
