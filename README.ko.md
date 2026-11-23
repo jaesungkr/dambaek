@@ -16,12 +16,20 @@
 
 ### Claude Code
 
-Claude Code 대화 입력창에서 아래 두 명령을 차례대로 실행하세요. Node.js를 업데이트할 필요는 없습니다.
+**CLI (v2.1.292 이상).** Claude Code 대화창 밖에서 PowerShell이나 시스템 터미널을 열고 다음 명령을 실행하세요. [Claude Code 설치 공식 문서](https://code.claude.com/docs/en/discover-plugins#add-a-marketplace-and-install-in-one-command)
+
+```sh
+claude plugin install dambaek --marketplace https://github.com/jaesungkr/dambaek.git
+```
+
+**대화형 터미널에서 설치하는 방법.** 위 명령을 사용할 수 없으면 터미널에서 Claude Code 세션을 열고 아래 두 명령을 차례대로 입력하세요. Node.js를 업데이트할 필요는 없습니다.
 
 ```text
 /plugin marketplace add jaesungkr/dambaek
 /plugin install dambaek@dambaek
 ```
+
+**Windows용 Claude Desktop.** **Code**에서 **Plugins**를 열고 **+ Add**를 선택하세요. [담백 GitHub 저장소](https://github.com/jaesungkr/dambaek)를 마켓플레이스로 추가한 뒤, 추가한 마켓플레이스에서 담백을 설치하세요.
 
 새 세션에서 `/dambaek:dambaek draft.md의 도입부를 다듬어 줘`를 입력하세요.
 

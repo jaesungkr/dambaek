@@ -18,12 +18,20 @@ The edit mentions Saturday only once and keeps the reason for the change of venu
 
 ### Claude Code
 
-Enter these commands in Claude Code. No Node.js update is required.
+**CLI (v2.1.292 or later).** Run this in PowerShell or your system terminal, outside the Claude Code session. [Claude Code installation reference](https://code.claude.com/docs/en/discover-plugins#add-a-marketplace-and-install-in-one-command)
+
+```sh
+claude plugin install dambaek --marketplace https://github.com/jaesungkr/dambaek.git
+```
+
+**Interactive terminal fallback.** Inside a Claude Code session, enter these two commands in order. No Node.js update is required.
 
 ```text
 /plugin marketplace add jaesungkr/dambaek
 /plugin install dambaek@dambaek
 ```
+
+**Claude Desktop on Windows.** In **Code**, open **Plugins**, choose **+ Add**, and add the [Dambaek GitHub repository](https://github.com/jaesungkr/dambaek) as a marketplace. Then install Dambaek from that marketplace.
 
 Start a new session and type `/dambaek:dambaek draft.md의 도입부를 다듬어 줘`.
 
