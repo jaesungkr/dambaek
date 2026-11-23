@@ -14,52 +14,23 @@ Dambaek helps you edit Korean drafts. It trims repetition and smooths awkward ph
 
 The edit mentions Saturday only once and keeps the reason for the change of venue.
 
-## Install Dambaek in your writing tool
+## Use the instructions in chat
 
-### Claude Code
+- **ChatGPT or Notion AI.** Copy the contents of [SKILL.md](SKILL.md) and paste them with your draft into the same conversation.
+- **Claude web or desktop chat.** Download [dambaek-chat.zip](https://github.com/jaesungkr/dambaek/releases/download/v0.1.0/dambaek-chat.zip). Open **Plugins** in the sidebar and upload the ZIP as a skill without unzipping it. Enable Dambaek, then paste your draft into chat. Claude requires code execution and file creation for custom skills. [Claude's Plugins guide](https://support.claude.com/en/articles/17740565-manage-plugins-skills-and-connectors-from-one-plugins-page)
 
-**CLI (v2.1.292 or later).** Run this in PowerShell or your system terminal, outside the Claude Code session. [Claude Code installation reference](https://code.claude.com/docs/en/discover-plugins#add-a-marketplace-and-install-in-one-command)
+Then ask:
 
-```sh
-claude plugin install dambaek --marketplace https://github.com/jaesungkr/dambaek.git
-```
+> 담백으로 이 글을 다듬어 줘. 뜻과 말투는 그대로 살려 줘.
 
-**Interactive terminal fallback.** Inside a Claude Code session, enter these two commands in order. No Node.js update is required.
+<details>
+<summary>Claude's older upload menu and ZIP checksum</summary>
 
-```text
-/plugin marketplace add jaesungkr/dambaek
-/plugin install dambaek@dambaek
-```
-
-**Claude Desktop on Windows.** In **Code**, open **Plugins**, choose **+ Add**, and add the [Dambaek GitHub repository](https://github.com/jaesungkr/dambaek) as a marketplace. Then install Dambaek from that marketplace.
-
-Start a new session and type `/dambaek:dambaek draft.md의 도입부를 다듬어 줘`.
-
-### Codex
-
-With **Node.js 22.20.0 or later**, run this in your project terminal:
-
-```sh
-npx --yes skills@1.9.0 add jaesungkr/dambaek --skill dambaek -a codex -y
-```
-
-Start Codex in that project and type `$dambaek draft.md의 도입부를 다듬어 줘`.
-
-### Claude.ai and Claude Desktop chat
-
-Download [dambaek-chat.zip](https://github.com/jaesungkr/dambaek/releases/download/v0.1.0/dambaek-chat.zip). In **Customize → Skills → + → Create skill → Upload a skill**, upload the ZIP as-is and enable Dambaek. Ask Claude to polish a Korean draft in chat. This route requires code execution and file creation in Claude and works without a local Node.js update.
+If your sidebar still says **Customize**, use **Customize → Skills → + → Create skill → Upload a skill**. [Claude's custom skill guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude)
 
 ZIP SHA-256: `2bb9709f93cb16ee5d055766ddb484334af9973d37a420cd6f13ab65820c7048`
 
-### Preview a file edit
-
-In Codex or Claude Code, you can ask in your own words, “draft.md의 도입부를 자연스러운 한국어로 다듬어 줘.” Review the preview in chat. To write the change, say “방금 제안한 도입부만 파일에 반영해 줘.”
-
-## Use the instructions in chat
-
-Paste the contents of [SKILL.md](SKILL.md) and your draft into the same conversation. For the example above, ask:
-
-> 이 문단에서 반복되는 설명을 줄여 줘. 장소가 바뀌는 이유와 원래 말투는 그대로 살려 줘.
+</details>
 
 ### Keep the instructions in ChatGPT or Notion
 
@@ -68,7 +39,54 @@ Paste the contents of [SKILL.md](SKILL.md) and your draft into the same conversa
 | ChatGPT | Add the file to a project and ask ChatGPT in the project instructions to use Dambaek when editing Korean. |
 | Notion AI | Save the instructions on a page and mention it in your editing request. If the editor cannot read the page, paste the instructions with the draft. |
 
-See the [platform guide](docs/platforms.md) for account requirements, official setup instructions, and the status of product testing.
+## Install Dambaek in your writing tool
+
+<a name="claude-code"></a>
+
+<details>
+<summary>Claude Code · Terminal or Windows desktop Code</summary>
+
+**Terminal with Claude Code v2.1.292 or later.** Run this in PowerShell or your system terminal before starting Claude Code. [Claude Code installation guide](https://code.claude.com/docs/en/discover-plugins#add-a-marketplace-and-install-in-one-command)
+
+```sh
+claude plugin install dambaek --marketplace https://github.com/jaesungkr/dambaek.git
+```
+
+**Windows desktop Code.** Open **Plugins**, choose **+ Add**, and add [the Dambaek GitHub URL](https://github.com/jaesungkr/dambaek) as a marketplace. Install Dambaek from that marketplace.
+
+Start a new session and type `/dambaek:dambaek draft.md의 도입부를 다듬어 줘`.
+
+<details>
+<summary>Fallback for older Claude Code versions</summary>
+
+Inside a Claude Code terminal session, enter these commands in order:
+
+```text
+/plugin marketplace add jaesungkr/dambaek
+/plugin install dambaek@dambaek
+```
+
+</details>
+</details>
+
+<a name="codex"></a>
+
+<details>
+<summary>Codex · Install in a project with Node.js 22.20.0 or later</summary>
+
+Run this in your project terminal:
+
+```sh
+npx --yes skills@1.9.0 add jaesungkr/dambaek --skill dambaek -a codex -y
+```
+
+Start Codex in that project and type `$dambaek draft.md의 도입부를 다듬어 줘`.
+
+</details>
+
+**File edits.** Review the proposed edit in chat, then explicitly approve the portion you want written to the file.
+
+See the [platform guide](docs/platforms.md) for account requirements, setup details, and product testing status.
 
 ## How Dambaek preserves meaning
 
