@@ -1,6 +1,6 @@
 # Use Dambaek with your AI / 도구별 사용 안내
 
-[English README](../README.md) · [한국어 README](../README.ko.md)
+[한국어 README](../README.md) · [English README](../README.en.md)
 
 The same [SKILL.md](../SKILL.md) supplies the editing guidance. Start by pasting its contents with your draft. For recurring use, choose a documented setup below.
 

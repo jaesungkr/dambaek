@@ -23,7 +23,7 @@ If the example is invented, label it as an illustrative case. Remove personal, c
 - Include a positive example and a nearby example where the rule should leave the text alone.
 - Check facts, negation, uncertainty, numbers, quotations, speech level, and document structure.
 - Recheck the relevant [review cases](tests/README.md).
-- Keep `README.md` and `README.ko.md` aligned when changing shared claims or usage instructions.
+- Keep `README.md` (Korean) and `README.en.md` (English) aligned when changing shared claims or usage instructions.
 - Cite official product documentation for setup instructions and distinguish documentation checks from actual product tests.
 
 Style preferences vary. Explain how your proposal improves the intended draft rather than banning a word in every context.
