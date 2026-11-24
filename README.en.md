@@ -1,10 +1,10 @@
+![Dambaek symbol](docs/images/dambaek.svg)
+
 # 담백 · Dambaek
 
-[한국어](README.md) · **English**
+Edit repetition and awkward phrasing in Korean drafts while keeping the writer’s meaning and tone.
 
-Dambaek helps you edit Korean drafts. It trims repetition and smooths awkward phrasing while keeping your meaning and tone.
-
-![Two Korean sentences about Thursday book returns become one. The text follows below.](docs/images/sentence-edit.png)
+[30-second trial](#30-second-trial) · [Use in chat](#use-the-instructions-in-chat) · [Install](#install-dambaek-in-your-writing-tool) · [한국어](README.md)
 
 **Before**
 
