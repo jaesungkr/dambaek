@@ -90,3 +90,27 @@ When recording a product test, include the date, product/model, instruction vers
 Your chosen AI service processes the text you provide. Before sending unpublished or confidential material, review the provider's data settings and your organization's rules. The instruction file adds no independent privacy guarantee.
 
 작성한 글은 선택한 AI 서비스가 처리한다. 비공개 자료를 입력하기 전에 해당 서비스의 데이터 설정과 소속 조직의 규칙을 확인한다.
+
+## Additional installation candidates / 추가 설치 후보
+
+The following routes use the same root `SKILL.md` and four files under `references/`. The commands show how to review this candidate from a local checkout. Product installation and invocation still need testing.
+
+아래 경로는 루트의 `SKILL.md`와 `references/`의 파일 네 개를 함께 사용합니다. 명령은 로컬 후보 작업트리에서 검토할 때 씁니다. 앱 설치와 호출은 각각 확인이 필요합니다.
+
+| Tool / 도구 | Candidate / 후보 |
+| --- | --- |
+| Pi | From the candidate checkout run `pi install -l "$PWD"`, then try `/skill:dambaek`. The git-source form uses `pi install git:github.com/jaesungkr/dambaek` once the manifest is publicly available. / 후보 작업트리에서 프로젝트용으로 설치하고 명령을 확인합니다. 공개 원격 명령은 매니페스트가 배포된 뒤 사용합니다. [Pi Packages](https://docs.pi.dev/latest/packages) |
+| Cursor | The manifests point at the root skill. For manual project use, copy the skill as directed below into `.cursor/skills/dambaek/`. Repository import expects a Cursor marketplace manifest and a repository the app can access. / 플러그인 매니페스트의 루트 스킬 로딩과 저장소 가져오기는 앱에서 검증해야 합니다. 로컬 검토에는 프로젝트 스킬 경로를 쓸 수 있습니다. [Cursor Agent Skills](https://cursor.com/docs/skills) · [Cursor schemas](https://github.com/cursor/plugins/tree/main/schemas) |
+| Skills CLI | Inspect discovery with `npx --yes skills@1.9.0 add . --list`. For an intended agent, use `npx --yes skills@1.9.0 add . --skill dambaek -a AGENT` from the candidate checkout and replace `AGENT` with its CLI identifier, such as `gemini-cli`, `github-copilot`, or `windsurf`. Pass `-a '*'` only when targeting all agents intentionally. / 후보 작업트리에서 검색 목록을 확인하고, 필요한 에이전트만 선택해 설치합니다. [Skills CLI](https://github.com/vercel-labs/skills) |
+| Manual / 수동 | Copy `SKILL.md` and the entire `references/` directory into a folder named `dambaek` in the agent’s documented skill root. For example, use `.agents/skills/dambaek/` for a Codex project. If the assistant takes instructions only as text, paste the guidance and any relevant reference with the draft. / 도구의 공식 스킬 경로에 담백 폴더를 만들고 파일과 참조의 상대 경로를 유지합니다. [Agent Skills](https://agentskills.io/specification) · [Codex Skills](https://developers.openai.com/codex/skills) |
+| Codex metadata / 표시 정보 | `agents/openai.yaml` supplies a name, short description and starter prompt. For a manual Codex copy, include the `agents/` directory if you want this metadata. / 수동 설치에서도 표시 정보가 필요하면 `agents/`를 함께 복사합니다. [OpenAI metadata guide](https://github.com/openai/skills/blob/main/skills/.system/skill-creator/references/openai_yaml.md) |
+
+### Build a Claude Chat ZIP from a checkout / 작업트리에서 Claude 채팅 ZIP 만들기
+
+```sh
+python3 scripts/build_chat_zip.py /tmp/dambaek-chat.zip
+```
+
+Choose a new output path. The archive contains a single `dambaek/` folder with the skill and four references. Upload that archive using the Claude custom-skill flow above. The existing release download remains available in the READMEs.
+
+새 출력 경로를 지정하세요. ZIP에는 스킬과 참조 네 개가 든 `dambaek/` 폴더 하나가 들어갑니다. 위 Claude 사용자 스킬 절차에서 이 ZIP을 업로드하세요. 기존 릴리스 ZIP 링크는 README에 있습니다.

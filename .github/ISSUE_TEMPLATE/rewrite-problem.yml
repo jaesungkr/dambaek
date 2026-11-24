@@ -1,0 +1,21 @@
+name: 잘못된 수정 / Rewrite problem
+description: 의미, 말투, 조건 또는 문서 구조가 달라진 사례를 알려 주세요.
+body:
+  - type: textarea
+    id: source
+    attributes:
+      label: 원문과 요청 / Source and request
+      description: 공개해도 되는 최소 예시와 요청을 적어 주세요. 개인 정보는 지워 주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: 실제 결과와 지켜야 할 점 / Actual result and expected behavior
+      description: 달라진 사실, 말투 또는 파일 범위를 알려 주세요.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 도구와 스킬 버전 / App and skill version

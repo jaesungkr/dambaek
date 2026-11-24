@@ -1,0 +1,28 @@
+name: Validate Dambaek
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 tests/check_structure.py
+      - run: python3 tests/check_package.py
+      - run: python3 tests/check_upgrade.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: List the skill from the checkout
+        run: npx --yes skills@1.9.0 add . --list
+      - name: Validate the Claude Code plugin and marketplace
+        run: npx --yes --package=@anthropic-ai/claude-code@2.1.237 claude plugin validate .

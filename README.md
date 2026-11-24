@@ -14,10 +14,20 @@ Dambaek helps you edit Korean drafts. It trims repetition and smooths awkward ph
 
 The edit mentions Saturday only once and keeps the reason for the change of venue.
 
+## 30-second trial
+
+Copy the whole block into a chat you already use, such as ChatGPT, Claude, or Notion AI. This quick trial uses a short prompt. The full Dambaek instructions are below.
+
+```text
+아래 문단을 자연스러운 한국어로 다듬어 줘. 반복되는 설명을 합치고, 원문에 있는 이유는 관련 안내와 이어 줘. 뜻, 조건, 말투를 유지하고 수정문만 보여 줘.
+
+수요일에는 1층에서 신청을 받습니다. 수요일 신청은 1층에서만 가능합니다. 2층은 그날 전기 점검으로 신청을 받지 않습니다.
+```
+
 ## Use the instructions in chat
 
 - **ChatGPT or Notion AI.** Copy the contents of [SKILL.md](SKILL.md) and paste them with your draft into the same conversation.
-- **Claude web or desktop chat.** Download [dambaek-chat.zip](https://github.com/jaesungkr/dambaek/releases/download/v0.1.0/dambaek-chat.zip). Open **Plugins** in the sidebar and upload the ZIP as a skill without unzipping it. Enable Dambaek, then paste your draft into chat. Claude requires code execution and file creation for custom skills. [Claude's Plugins guide](https://support.claude.com/en/articles/17740565-manage-plugins-skills-and-connectors-from-one-plugins-page)
+- **Claude web or desktop chat.** Download [dambaek-chat.zip](https://github.com/jaesungkr/dambaek/releases/download/v0.2.0/dambaek-chat.zip). Open **Plugins** in the sidebar and upload the ZIP as a skill without unzipping it. Enable Dambaek, then paste your draft into chat. Claude requires code execution and file creation for custom skills. [Claude's Plugins guide](https://support.claude.com/en/articles/17740565-manage-plugins-skills-and-connectors-from-one-plugins-page)
 
 Then ask:
 
@@ -28,7 +38,7 @@ Then ask:
 
 If your sidebar still says **Customize**, use **Customize → Skills → + → Create skill → Upload a skill**. [Claude's custom skill guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude)
 
-ZIP SHA-256: `2bb9709f93cb16ee5d055766ddb484334af9973d37a420cd6f13ab65820c7048`
+ZIP SHA-256: `8f534c2eb09ea5416221c983f0a51dec9d4980fa64213fd4831185c5e51cde96`
 
 </details>
 
@@ -38,6 +48,10 @@ ZIP SHA-256: `2bb9709f93cb16ee5d055766ddb484334af9973d37a420cd6f13ab65820c7048`
 | --- | --- |
 | ChatGPT | Add the file to a project and ask ChatGPT in the project instructions to use Dambaek when editing Korean. |
 | Notion AI | Save the instructions on a page and mention it in your editing request. If the editor cannot read the page, paste the instructions with the draft. |
+
+**Paragraph editing.** Ask Dambaek to connect and reorganize a selected passage or a full draft. See the [paragraph examples](references/examples.md#단락-편집-예시).
+
+**Writing-style card.** Ask for a card from your own samples, then provide it when you want to reuse it. See the [card guide](references/everyday-writing.md#문체-카드).
 
 ## Install Dambaek in your writing tool
 
@@ -85,6 +99,8 @@ Start Codex in that project and type `$dambaek draft.md의 도입부를 다듬�
 </details>
 
 **File edits.** Review the proposed edit in chat, then explicitly approve the portion you want written to the file.
+
+For **Pi, Cursor, and other agents**, see [additional installation candidates](docs/platforms.md#additional-installation-candidates--추가-설치-후보).
 
 See the [platform guide](docs/platforms.md) for account requirements, setup details, and product testing status.
 

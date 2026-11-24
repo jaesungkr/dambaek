@@ -1,6 +1,6 @@
 # Behavior review
 
-`cases.json` contains 38 runnable review inputs. Each record supplies the complete request, text and invariants. They are original fixtures, not user manuscripts.
+`cases.json` contains 50 review inputs. Each record supplies the complete request, text and invariants. They are original fixtures, not user manuscripts.
 
 ## Run a review
 
@@ -19,6 +19,7 @@ From the repository root:
 
 ```sh
 python3 tests/check_structure.py
+python3 tests/check_package.py
 ```
 
 This dependency-free check verifies skill metadata, fixture completeness and local Markdown links. It does not execute an AI model, assess Korean prose quality or call external services.
@@ -36,3 +37,13 @@ This dependency-free check verifies skill metadata, fixture completeness and loc
 For comparisons, use the same inputs and run conditions with the baseline and revised guidance. Hide variant names and desired outputs from the editor and, where possible, from the grader. Save unedited outputs and instruction hashes. Report preservation and editing separately, including ties and regressions; a small batch is not a benchmark.
 
 `PATTERN_REVIEW.md` records the bounded paired check for six composite cases. The full 36-case suite has not been executed.
+
+Run `python3 tests/check_upgrade.py` to check the documented modes and approval markers, parity of the two trial prompts, reference paths in the existing ZIP layout, and the protected fixture's illustrative byte replacement. These are deterministic repository checks. They do not exercise a model or a platform installer.
+
+## Targeted review for style and file editing
+
+Run the `voice-sample-cross-genre`, `requested-edit-stages`, and `tightening-for-known-reader` cases for the new text behavior. The package check verifies the archive contains byte-identical copies of the skill and references. For file behavior, copy [the file fixture](fixtures/scoped-edit.md) to a disposable directory and record its bytes:
+
+1. Ask to smooth the two repetitive opening sentences under `# 접수` and show a preview. Expect a summary covering all three sections and the two requested sentences as the only edit target. The file hash must stay the same.
+2. Explicitly approve the suggested replacement. Expect a diff limited to the requested sentences. Frontmatter, URL, inline code, JSON, table, remaining headings and line endings must match the original bytes.
+3. Reset the file. Preview again, then change one of the target sentences before approving. Expect a fresh preview and no write by the skill until the revised edit has been approved.

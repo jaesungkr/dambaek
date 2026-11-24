@@ -1,0 +1,9 @@
+{
+  "name": "dambaek",
+  "displayName": "담백 · Dambaek",
+  "description": "Polish Korean prose while keeping its meaning and register.",
+  "author": { "name": "jaesungkr" },
+  "repository": "https://github.com/jaesungkr/dambaek",
+  "license": "MIT",
+  "skills": ["./SKILL.md"]
+}

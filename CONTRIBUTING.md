@@ -2,6 +2,8 @@
 
 Korean and English contributions are welcome. A small example that explains an editing problem is a useful contribution on its own.
 
+Use the [rewrite problem or editing rule form](https://github.com/jaesungkr/dambaek/issues/new/choose) for a public report when the templates are available. Keep private manuscripts out of the report.
+
 ## Share an editing case
 
 Include:
@@ -28,7 +30,7 @@ Style preferences vary. Explain how your proposal improves the intended draft ra
 
 ## 한국어 안내
 
-짧은 사례 하나만으로도 기여할 수 있다. 원문, 편집 요청, 실제 결과, 기대 동작, 이유를 적는다. 실제 실행 결과라면 모델·제품, 날짜, 사용한 지침 버전도 함께 남긴다. 직접 만든 예시는 가상 사례라고 표시한다.
+이슈 양식이 배포되면 [잘못된 수정 또는 편집 기준 제안](https://github.com/jaesungkr/dambaek/issues/new/choose)을 이용할 수 있다. 공개 보고에는 비공개 원고를 첨부하지 않는다. 짧은 사례 하나만으로도 기여할 수 있다. 원문, 편집 요청, 실제 결과, 기대 동작, 이유를 적는다. 실제 실행 결과라면 모델·제품, 날짜, 사용한 지침 버전도 함께 남긴다. 직접 만든 예시는 가상 사례라고 표시한다.
 
 규칙을 제안할 때는 수정이 필요한 예시와 그대로 두어야 하는 예시를 함께 제공한다. 사실, 부정의 범위, 불확실성, 수치, 인용, 높임말, 문서 구조를 확인한다. 특정 단어를 모두 금지하기보다 해당 문맥에서 무엇이 나아지는지 설명한다.
 

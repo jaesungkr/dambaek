@@ -1,0 +1,10 @@
+name: 편집 기준 제안 / Editing rule suggestion
+description: 비슷한 문장을 언제 고치고 언제 살릴지 제안해 주세요.
+body:
+  - type: textarea
+    id: examples
+    attributes:
+      label: 수정 예와 보존 예 / Change and keep examples
+      description: 공개 가능한 한국어 예문 두 개와 판단 근거를 알려 주세요.
+    validations:
+      required: true

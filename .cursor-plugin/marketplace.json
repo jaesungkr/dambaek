@@ -1,0 +1,11 @@
+{
+  "name": "dambaek",
+  "owner": { "name": "jaesungkr" },
+  "plugins": [
+    {
+      "name": "dambaek",
+      "source": "./",
+      "description": "Polish Korean prose while keeping its meaning and register."
+    }
+  ]
+}

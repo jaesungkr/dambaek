@@ -12,10 +12,20 @@
 
 > 모임 장소는 2층 강의실입니다. 토요일에는 강의실을 쓸 수 없어 1층 도서실에서 모입니다.
 
+## 30초 체험
+
+아래 블록을 통째로 복사해 평소 쓰는 ChatGPT, Claude, Notion AI 등의 채팅에 붙여 넣으세요. 짧은 체험용 요청입니다. 담백의 전체 지침은 아래에서 볼 수 있습니다.
+
+```text
+아래 문단을 자연스러운 한국어로 다듬어 줘. 반복되는 설명을 합치고, 원문에 있는 이유는 관련 안내와 이어 줘. 뜻, 조건, 말투를 유지하고 수정문만 보여 줘.
+
+수요일에는 1층에서 신청을 받습니다. 수요일 신청은 1층에서만 가능합니다. 2층은 그날 전기 점검으로 신청을 받지 않습니다.
+```
+
 ## 채팅에 지침을 붙여 넣어 쓰기
 
 - **ChatGPT 또는 Notion AI.** [SKILL.md](SKILL.md)의 내용을 복사해 다듬을 글과 함께 같은 대화에 붙여 넣으세요.
-- **Claude 웹 또는 데스크톱 일반 채팅.** [dambaek-chat.zip](https://github.com/jaesungkr/dambaek/releases/download/v0.1.0/dambaek-chat.zip)을 내려받으세요. 사이드바의 **Plugins**를 열고 압축을 풀지 않은 채 스킬로 업로드하세요. 담백을 켠 뒤 채팅에 초안을 붙여 넣으세요. Claude의 코드 실행·파일 생성 기능이 필요합니다. [Claude Plugins 안내](https://support.claude.com/en/articles/17740565-manage-plugins-skills-and-connectors-from-one-plugins-page)
+- **Claude 웹 또는 데스크톱 일반 채팅.** [dambaek-chat.zip](https://github.com/jaesungkr/dambaek/releases/download/v0.2.0/dambaek-chat.zip)을 내려받으세요. 사이드바의 **Plugins**를 열고 압축을 풀지 않은 채 스킬로 업로드하세요. 담백을 켠 뒤 채팅에 초안을 붙여 넣으세요. Claude의 코드 실행·파일 생성 기능이 필요합니다. [Claude Plugins 안내](https://support.claude.com/en/articles/17740565-manage-plugins-skills-and-connectors-from-one-plugins-page)
 
 이렇게 요청해 보세요.
 
@@ -26,7 +36,7 @@
 
 사이드바에 **Customize**가 보이면 **Customize → Skills → + → Create skill → Upload a skill**에서 업로드하세요. [Claude 사용자 스킬 안내](https://support.claude.com/en/articles/12512180-use-skills-in-claude)
 
-ZIP SHA-256: `2bb9709f93cb16ee5d055766ddb484334af9973d37a420cd6f13ab65820c7048`
+ZIP SHA-256: `8f534c2eb09ea5416221c983f0a51dec9d4980fa64213fd4831185c5e51cde96`
 
 </details>
 
@@ -36,6 +46,10 @@ ZIP SHA-256: `2bb9709f93cb16ee5d055766ddb484334af9973d37a420cd6f13ab65820c7048`
 | --- | --- |
 | ChatGPT | 프로젝트 자료에 지침 파일을 올리고, 프로젝트 지침에 “한국어 글을 다듬을 때 담백을 참고해 줘”라고 적으세요. |
 | Notion AI | 지침을 페이지에 저장한 뒤 편집을 요청할 때 그 페이지를 지정하세요. AI가 페이지를 읽을 수 없으면 지침을 직접 붙여 넣으세요. |
+
+**단락 편집.** 글 전체나 지정한 범위의 문장과 문단을 이어 달라고 요청하세요. [단락 편집 예시](references/examples.md#단락-편집-예시)
+
+**문체 카드.** 내 글로 짧은 문체 카드를 만들고 필요할 때 다시 제공하세요. [문체 카드 안내](references/everyday-writing.md#문체-카드)
 
 ## 사용하는 도구에 설치하기
 
@@ -83,6 +97,8 @@ npx --yes skills@1.9.0 add jaesungkr/dambaek --skill dambaek -a codex -y
 </details>
 
 **파일을 다듬을 때.** 대화에서 수정안을 확인한 뒤 파일에 반영할 부분을 지정해 승인하세요.
+
+**Pi, Cursor와 다른 에이전트**는 [추가 설치 후보](docs/platforms.md#additional-installation-candidates--추가-설치-후보)를 참고하세요.
 
 [도구별 사용 안내](docs/platforms.md)에서 이용 조건, 설정 방법, 제품별 검증 범위를 확인할 수 있습니다.
 

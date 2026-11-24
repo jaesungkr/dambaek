@@ -1,0 +1,11 @@
+{
+  "name": "dambaek",
+  "private": true,
+  "description": "Polish Korean prose while keeping its meaning and register.",
+  "license": "MIT",
+  "repository": "github:jaesungkr/dambaek",
+  "keywords": ["pi-package"],
+  "pi": {
+    "skills": ["./"]
+  }
+}
